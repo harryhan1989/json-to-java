@@ -10,5 +10,7 @@ nodejs eggjs json 序列化为复杂的dubbo java实体方法,可支持实体类
 
 3、调用，以eggjs为例， const ugcModel = ctx.helper.convertJsonToJavaModel(ctx.helper.javaModels.UGCApiModel, ctx.request.body); 这样调用后即可得到最终dubbo可识别的序列化后的JSON,可以直接使用这个序列化后的json与dubbo的接口调用，具体js调用dubbo，这里推荐使用[node-zookeeper-dubbo](https://github.com/omnip620/node-zookeeper-dubbo)这个组件, 调用举例：const result = await app.dubboClient.ugcAgent.createUgc(ugcModel);
 
+4、答疑：demo model的定义出现了这样的interface: 'com.sns.ugc.domain.ForwardUgcApiModel$ForwardToCircleInfo' 带$符的定义，是因为其对应的java实体类中出现了这种调用方式，List<ForwardUgcApiModel.ForwardToCircleInfo> circleInfos;
+
 ### 感谢
 感谢 [js-to-java](https://github.com/node-modules/js-to-java), [hessian.js](https://github.com/node-modules/hessian.js),感谢 [node-zookeeper-dubbo](https://github.com/omnip620/node-zookeeper-dubbo) 的作者们。
