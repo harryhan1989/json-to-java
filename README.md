@@ -1,5 +1,5 @@
 # json-to-java
-nodejs eggjs json 序列化为复杂的dubbo java实体方法, 可以基于此方法思路扩产为通用的eggjs插件或者nodejs通用插件，有兴趣的同学可以欢迎提交代码。
+nodejs eggjs json 序列化为复杂的dubbo java实体方法,可支持实体类中嵌入实体或List<实体>等的转换。现只是个eggjs的工具类，有兴趣的同学可以基于此方法思路扩产为通用的eggjs插件或者nodejs通用插件，可以欢迎提交代码。
 
 ### 用法
 由于此方法基于eggjs模式开发，所以调用暂时只支持eggjs直接调用，若是其它nodejs环境，需要做些简单修改，主要是访问方式上的修改。
