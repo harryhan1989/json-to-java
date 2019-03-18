@@ -13,4 +13,4 @@ nodejs eggjs json 序列化为复杂的dubbo java实体方法,可支持实体类
 4、答疑：demo model的定义出现了这样的interface: 'com.sns.ugc.domain.ForwardUgcApiModel$ForwardToCircleInfo' 带$符的定义，是因为其对应的java实体类中出现了这种调用方式，List<ForwardUgcApiModel.ForwardToCircleInfo> circleInfos;
 
 ### 感谢
-感谢 [js-to-java](https://github.com/node-modules/js-to-java), [hessian.js](https://github.com/node-modules/hessian.js),感谢 [node-zookeeper-dubbo](https://github.com/omnip620/node-zookeeper-dubbo) 的作者们。
+感谢 [js-to-java](https://github.com/node-modules/js-to-java), [hessian.js](https://github.com/node-modules/hessian.js),[node-zookeeper-dubbo](https://github.com/omnip620/node-zookeeper-dubbo) 的作者们。
