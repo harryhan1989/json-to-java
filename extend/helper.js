@@ -4,6 +4,12 @@ const java = require('js-to-java');
 const _ = require('lodash');
 
 module.exports = {
+  /* 定义说明：
+  * 不带任何符号的类型定义，则是java的基本类型，见js-to-java库中说明中的基础类型
+  * ：代表有前置类型的类型（可自定义类型），如：optionsContent: 'array:String' 代表String数组，ugcTypeEnum: 'enum:com.sns.ugc.enums.UGCTypeEnum' 代表自定义类型枚举
+  * ::代表有前置类型的自定义model集合，如List<Model>，Model[]，定义如：circleInfos: 'List::ForwardToCircleInfoModel'，fileInfoModel: 'array::FileInfoModel'
+  * :::代表是个无前置类型的自定义model，定义如：overPic: ':::FileInfoModel'
+  */
   javaModels: {
     UGCApiModel: {
       interface: 'com.sns.ugc.domain.UGCApiModel',
@@ -23,6 +29,8 @@ module.exports = {
         Tread: 'boolean',
         startTime: 'Date', // Date转换为java.util.Date
         overPic: ':::FileInfoModel', // :::代表是个无前置类型的Model
+        fileInfoModel: 'array::FileInfoModel', // 自定义的model类型集合，如：FileInfoModel数组
+        optionsContent: 'array:String', // 代表String数据
       },
     },
     ForwardToCircleInfoModel: {
