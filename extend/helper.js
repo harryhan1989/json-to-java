@@ -85,7 +85,7 @@ module.exports = {
         if (kDef.indexOf('Date') === 0) { // 对Date类型做特殊处理
           return { $class: 'java.util.Date', $: v };
         } else if (kDef.indexOf(':::') >= 0) {
-          return java(ctx.helper.javaModels[kDef.split(':::')][1].interface, v);
+          return java(ctx.helper.javaModels[kDef.split(':::')[1]].interface, v);
         } else if (kDef.indexOf('::') >= 0) {
           return ctx.helper.convertJsonToJavaModel(ctx.helper.javaModels[kDef.split('::')[1]], v, kDef.split('::')[0]);
         } else if (kDef.indexOf(':') >= 0) {
